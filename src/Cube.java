@@ -9,26 +9,30 @@ public class Cube{
     public Cube (int side){
         setSide(side);
     }
+    public int getSide(){
+        return side;
+    }
 
-    private void setSide(int side) {
+    public void setSide(int side) {
         validateSide(side);
         this.side=side;
     }
 
-    private String validateSide(int side) {
+    private void validateSide(int side) {
         if (side < 1) {
             throw new IllegalArgumentException("A cube’s side length must be equal to or greater than 1!");
         }
     }
-        int calculateSurfaceArea(){
+        public int calculateSurfaceArea(){
             return 6* side*side;
     }
-        int calculateVolume(){
+        public int calculateVolume(){
             return side*side*side;
         }
-         String toString(){
+         public String toString(){
             return "Cube:{side= " + side+"}";
         }
+
     }
 
 
